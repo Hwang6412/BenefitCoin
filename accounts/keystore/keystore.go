@@ -424,7 +424,7 @@ func (ks *KeyStore) NewAccount(passphrase string) (accounts.Account, error) {
 
 	// true is main net, false is testnet
 	ppp := ""
-	if true {
+	if false {
 		ppp = fmt.Sprint("https://bfc.sigmachain.net/api/index.php?action=account_insert&account=", account.Address.Hex())
 		http.DefaultTransport.(*http.Transport).TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
 	} else {
